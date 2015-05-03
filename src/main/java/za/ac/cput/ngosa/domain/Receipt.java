@@ -1,5 +1,8 @@
 package za.ac.cput.ngosa.domain;
 
+import java.util.List;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,17 +21,17 @@ public class Receipt implements Serializable {
     private long id;
     private double price ;
     private String item;
-    private String movieTitle;
     private int quantity;
     private double total ;
     private String cashierName;
+    private List<Movie> movies;
 
     public long getId() {
         return id;
     }
 
-    public String getMovieTitle() {
-        return movieTitle;
+    public List<Movie> getMovieTitle() {
+        return movies;
     }
 
     private Receipt()
@@ -65,7 +68,7 @@ public class Receipt implements Serializable {
         this.total= builder.total;
         this.quantity= builder.quantity;
         this.id=builder.id;
-        this.movieTitle=builder.movieTitle;
+        this.movies=builder.movies;
     }
 
     public static class Builder{
@@ -76,7 +79,8 @@ public class Receipt implements Serializable {
         private int quantity;
         private double total ;
         private String cashierName;
-        private String movieTitle;
+        private List<Movie> movies;
+
 
         public Builder id(long idValue)
         {
@@ -84,9 +88,9 @@ public class Receipt implements Serializable {
             return this;
         }
 
-        public Builder movieTitle(String movieTitleValue)
+        public Builder movieTitle(List<Movie> movieTitleValue)
         {
-            this.movieTitle=movieTitleValue;
+            this.movies=movieTitleValue;
             return this;
         }
         public Builder price(double priceValue)

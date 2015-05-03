@@ -5,7 +5,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by User on 2015/04/23.
@@ -57,15 +59,17 @@ public class CinemaTest extends TestCase {
     @Test
     public void testReceipt()
     {
-        Receipt receipt= new Receipt.Builder().cashierName("Sandy").id(232).movieTitle("Boyhood").price(60.00).quantity(2)
+        List<Movie> movies = new ArrayList<Movie>();
+
+        Receipt receipt= new Receipt.Builder().cashierName("Sandy").id(232).movieTitle(movies).price(60.00).quantity(2)
                 .item("movie").total().build();
 
-    /*    Assert.assertEquals("Sandy",receipt.getCashierName());
+        Assert.assertEquals("Sandy",receipt.getCashierName());
         Assert.assertEquals(232,receipt.getId());
         Assert.assertEquals("Boyhood",receipt.getMovieTitle());
         Assert.assertEquals(60.00,receipt.getPrice(),0.01);
         Assert.assertEquals(2,receipt.getQuantity());
-        Assert.assertEquals("movie",receipt.getItem());*/
+        Assert.assertEquals("movie",receipt.getItem());
         Assert.assertEquals(120.00,receipt.getTotal(),0.01);
     }
 

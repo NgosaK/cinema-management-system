@@ -2,7 +2,8 @@ package za.ac.cput.ngosa.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import java.util.List;
+import java.util.Map;
 /**
  * Created by User on 2015/04/23.
  */
