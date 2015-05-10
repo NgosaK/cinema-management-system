@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class ScreeningRoomFactory {
 
-    public static ScreeningRoom createManager(
+    public static ScreeningRoom createScreeningRoom(
             Map<String,String>values, int size,int id)
     {
         ScreeningRoom screeningRoom=new ScreeningRoom

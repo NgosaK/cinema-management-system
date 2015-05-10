@@ -9,17 +9,17 @@ import java.util.Map;
  */
 public class ScheduleFactory {
 
-    public static Schedule createManager(
+    public static Schedule createSchedule(
             Map<String,String>values, int duration, long
             id, int startTime)
     {
         Schedule schedule= new Schedule
                 .Builder()
-                .endTime()
                 .id(id)
                 .title(values.get("title"))
                 .duration(duration)
                 .startTime(startTime)
+                .endTime()
                 .build();
 
         return schedule;

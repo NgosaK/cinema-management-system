@@ -66,7 +66,6 @@ public class CinemaTest extends TestCase {
 
         Assert.assertEquals("Sandy",receipt.getCashierName());
         Assert.assertEquals(232,receipt.getId());
-        Assert.assertEquals("Boyhood",receipt.getMovieTitle());
         Assert.assertEquals(60.00,receipt.getPrice(),0.01);
         Assert.assertEquals(2,receipt.getQuantity());
         Assert.assertEquals("movie",receipt.getItem());

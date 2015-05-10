@@ -114,7 +114,7 @@ public class Receipt implements Serializable {
         public Builder total()
         {
             this.total=0;
-            this.total= total + (price * quantity);
+            this.total= (price * quantity);
             return this;
         }
 
@@ -124,15 +124,17 @@ public class Receipt implements Serializable {
             return this;
         }
 
-        /*public Builder copy(Receipt value)
+        public Builder copy(Receipt value)
         {
             this.price= value.price;
             this.item= value.item;
             this.quantity= value.quantity;
-            this.total= value.quantity;
+            this.total= value.total;
             this.cashierName= value.cashierName;
+            this.movies=value.movies;
+            this.id=value.id;
             return this;
-        }*/
+        }
 
         public Receipt build()
         {

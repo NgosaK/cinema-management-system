@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 @Entity
 
-public class Movie implements Serializable, Showing {
+public class Movie   implements Serializable, Showing {
 
     @Id
     private long id;
@@ -101,6 +101,17 @@ public class Movie implements Serializable, Showing {
             return this;
         }
 
+        public Builder copy(Movie value)
+        {
+            this.id=value.id;
+            this.type=value.type;
+            this.price=value.price;
+            this.title= value.title;
+            this.duration=value.duration;
+            this.genre=value.genre;
+
+            return this;
+        }
         public Movie build()
         {
             return new Movie(this);

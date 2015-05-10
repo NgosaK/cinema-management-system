@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class TvShowFactory {
 
-    public static TVShow createManager(
+    public static TVShow createTVShow(
             Map<String,String> values, long id,double price)
     {
         TVShow tvShow= new TVShow

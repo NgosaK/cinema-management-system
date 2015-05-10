@@ -15,9 +15,8 @@ import java.util.List;
 @Service
 public class BeverageServiceImpl implements BeverageService {
 @Autowired
-    BeverageRepository repository;
+  private  BeverageRepository repository;
 
-    @Override
     public List<Beverage> getBeverages() {
 
         List<Beverage> allDrinks= new ArrayList<Beverage>();

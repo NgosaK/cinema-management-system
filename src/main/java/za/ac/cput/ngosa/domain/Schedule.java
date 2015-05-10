@@ -86,19 +86,20 @@ public class Schedule implements Serializable {
 
         public Builder endTime()
         {
-
+            this.endTime=0;
             this.endTime= startTime + duration;
             return this;
         }
 
-      /*  public Builder copy(Schedule value)
+       public Builder copy(Schedule value)
         {
             this.endTime= value.endTime;
             this.startTime= value.startTime;
+            this.id=value.id;
             this.title= value.title;
             this.duration= value.duration;
             return this;
-        }*/
+        }
 
         public Schedule build()
         {

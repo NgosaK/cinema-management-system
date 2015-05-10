@@ -89,6 +89,17 @@ public class Food implements Serializable, Consumables {
             return this;
         }
 
+        public Builder copy(Food value)
+        {
+            this.name=value.name;
+            this.weight=value.weight;
+            this.price=value.price;
+            this.category=value.category;
+            this.code=value.code;
+            return this;
+
+        }
+
         public Food build()
         {
             return new Food(this);

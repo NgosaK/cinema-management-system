@@ -122,6 +122,20 @@ public class TVShow implements Serializable, Showing {
             return this;
         }
 
+        public Builder copy(TVShow value)
+        {
+            this.episode=value.episode;
+            this.title=value.title;
+            this.price=value.price;
+            this.genre=value.genre;
+            this.season=value.season;
+            this.duration=value.duration;
+            this.genre=value.genre;
+            this.id=value.id;
+
+            return this;
+        }
+
 
         public TVShow build()
         {

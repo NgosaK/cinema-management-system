@@ -8,5 +8,5 @@ import za.ac.cput.ngosa.domain.Beverage;
  */
 public interface BeverageRepository extends CrudRepository<Beverage,Integer> {
 
-    public Beverage findByCode(String code);
+  //  public Beverage findByCode(String code);
 }

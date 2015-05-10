@@ -1,6 +1,8 @@
 package za.ac.cput.ngosa.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
@@ -14,6 +16,7 @@ public class Manager extends Employee implements Serializable {
     private String department;
     private int numberOfEmployees;
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private String jobTitle;
@@ -111,12 +114,16 @@ public class Manager extends Employee implements Serializable {
             return this;
         }
 
-     /*   public Builder copy(Manager value)
+        public Builder copy(Manager value)
         {
             this.department= value.department;
             this.numberOfEmployees= value.numberOfEmployees;
+            this.name=value.name;
+            this.phoneNumber=value.phoneNumber;
+            this.id=value.id;
+            this.jobTitle=value.jobTitle;
             return this;
-        }*/
+        }
 
         public Manager build()
         {

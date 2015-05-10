@@ -65,13 +65,13 @@ public class ScreeningRoom implements Serializable{
             return this;
         }
 
-     /*   public Builder copy(ScreeningRoom value)
+       public Builder copy(ScreeningRoom value)
         {
             this.size= value.size;
             this.type= value.type;
             this.numberID= value.numberID;
             return this;
-        }*/
+        }
 
         public ScreeningRoom build()
         {

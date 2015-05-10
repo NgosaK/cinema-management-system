@@ -1,7 +1,10 @@
 package za.ac.cput.ngosa.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 /**
@@ -9,9 +12,10 @@ import java.util.Map;
  */
 @Entity
 
-public class Employee {
+public class Employee implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private String jobTitle;
@@ -74,13 +78,19 @@ public class Employee {
             return this;
         }
 
-        public Employee build()
+        public Builder copy(Employee value)
         {
-            return new Employee();
+            this.jobTitle= value.jobTitle;
+            this.phoneNumber= value.phoneNumber;
+            this.id=value.id;
+            this.name= value.name;
+            return this;
         }
 
-
-
+        public Employee build()
+        {
+            return new Employee(this);
+        }
 
     }
 }

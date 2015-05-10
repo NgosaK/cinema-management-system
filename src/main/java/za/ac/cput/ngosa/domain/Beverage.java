@@ -97,6 +97,16 @@ public class Beverage implements Serializable, Consumables {
             return this;
         }
 
+        public Builder copy(Beverage value)
+        {
+            this.category= value.category;
+            this.name= value.name;
+            this.price= value.price;
+            this.code= value.code;
+            this.volume= value.volume;
+            return this;
+        }
+
         public Beverage build()
         {
             return new Beverage(this);
